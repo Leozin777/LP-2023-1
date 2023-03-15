@@ -1,10 +1,15 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main
+{
+    public static void main(String[] args)
+    {
         int soma = 0;
         int exercicio = 0;
+        int y = 0;
+        int tabuadaValor = 0;
+        int tabuadaResultado = 0;
         while (exercicio != 5)
         {
             Scanner scanner = new Scanner(System.in);
@@ -28,8 +33,8 @@ public class Main {
                     System.out.println(soma);
                     break;
                 case 3:
-                    soma = 0;
-                    for(int i = 1; i < 101; i +=2)
+                    /*soma = 0;
+                    for(int i = 1; soma < 101; i +=2)
                     {
                         soma += i;
                         if(soma < 100)
@@ -38,15 +43,25 @@ public class Main {
                             System.out.println(valorExibido++);
                         }
                     }
-                    System.out.println(soma);
+                    System.out.println(soma);*/
+
+                    soma = 0;
+                    y = 0;
+
+                    while(soma + y < 100)
+                    {
+                        System.out.println(y);
+                        soma += y;
+                        y++;
+                    }
                     break;
                 case 4:
-                    int tabuadaValor = 9;
-                    int tabuadaResultado = 0;
+                    tabuadaValor = 9;
+                    tabuadaResultado = 0;
                     for(int i = 0; i <= 10; i++)
                     {
                         tabuadaResultado = i * tabuadaValor;
-                        System.out.println(tabuadaResultado);
+                        System.out.println(tabuadaValor + " X " + i + " = " + tabuadaResultado);
                     }
                     break;
                 case 5:

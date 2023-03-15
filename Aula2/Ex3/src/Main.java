@@ -13,7 +13,7 @@ public class Main {
 
         for(int i = 0; i < tamanhoFibonacci; i++)
         {
-            System.out.println(Fibonacci[i]);
+            System.out.print(Fibonacci[i] + " ");
         }
     }
 }
