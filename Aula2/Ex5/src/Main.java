@@ -1,37 +1,26 @@
 public class Main {
     public static void main(String[] args)
     {
-        int dia = 0;
-        int mes = 0;
-        int ano = 0;
+        int dia = 10;
+        int mes = 5;
+        int ano = 1982;
 
-        if(ano >= 0)
+        //range de ano 1900 - 2099
+
+        if((ano < 1900 || ano > 2099) || (mes < 1 || mes > 12) || (dia < 1 || dia > 31))
         {
-            if(mes >= 1 && mes <= 12)
-            {
-                if(mes == 2)
-                {
-                    if(dia >= 1 && dia <= 28)
-                        System.out.print("Data valida");
-                    else
-                        System.out.println("DIA INVÁLIDO - O mês de fevereiro vai do dai 1 até o dia 28");
-                }
-                else
-                {
-                    if(dia >= 1 && dia <= 31)
-                        System.out.print("Data valida");
-                    else
-                        System.out.println("DIA INVÁLIDO - O dia " + dia + " não é valido");
-                }
-            }
+            System.out.println("Data invalida");
+        }
+        else if(dia <= 31 && mes <= 12)
+        {
+            if((dia > 28) && (mes == 2) || (dia == 31) && ((mes == 4) || (mes == 6) || (mes == 9 ) || (mes == 11)))
+                System.out.println("Data invalida");
             else
-            {
-                System.out.println("MÊS INVÁLIDO - o " + mes + " deve estar entre 1 e 12");
-            }
+                System.out.println("Data valida");
         }
         else
         {
-            System.out.println("ANO INVÁLIDO - o ano não pode ser negativo");
+            System.out.println("Data valida");
         }
     }
 }
