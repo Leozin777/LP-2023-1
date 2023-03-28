@@ -1,25 +1,27 @@
 public class Relogio {
-    public Ponteiro ponteiroHora;
-    public Ponteiro ponteiroMinuto;
-    public Ponteiro ponteiroSegundo;
+    public Ponteiro ponteiroHora = new Ponteiro();
+    public Ponteiro ponteiroMinuto = new Ponteiro();
+    public Ponteiro ponteiroSegundo = new Ponteiro();
 
     void acertarRelogio(int hora, int minuto, int segundo)
     {
         ponteiroHora.posicao = hora;
-        ponteiroMinuto.posicao = minuto;
-        ponteiroSegundo.posicao = segundo;
+        ponteiroMinuto.posicao = minuto / 5;
+        ponteiroSegundo.posicao = segundo / 5;
     }
 
-    int lerHora()
+    int getHora()
     {
-        return this.ponteiroHora.posicao;
+        return ponteiroHora.posicao;
     }
-    int lerminuto()
+
+    int getMinuto()
     {
-        return this.ponteiroMinuto.posicao;
+        return ponteiroMinuto.posicao * 5;
     }
-    int lerSegundo()
+
+    int getSegundo()
     {
-        return this.ponteiroSegundo.posicao;
+        return ponteiroSegundo.posicao * 5;
     }
 }

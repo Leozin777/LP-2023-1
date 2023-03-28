@@ -1,25 +1,14 @@
 public class Main {
     public static void main(String[] args) {
 
-        CalculaCircunferencia calcCircunferencia = new CalculaCircunferencia();
-        CalculaQuadrado calcQuadrado = new CalculaQuadrado();
-        CalculaTrapezio calcTrapezio = new CalculaTrapezio();
-        CalculaTriangulo calcTriangulo = new CalculaTriangulo();
+        CalculaCircunferencia calcCircunferencia = new CalculaCircunferencia(2);
+        CalculaQuadrado calcQuadrado = new CalculaQuadrado(2);
+        CalculaTrapezio calcTrapezio = new CalculaTrapezio(2, 1, 5);
+        CalculaTriangulo calcTriangulo = new CalculaTriangulo(2, 10);
 
-        calcCircunferencia.raio = 2;
         System.out.println(calcCircunferencia.calculaArea());
-
-        calcQuadrado.lado = 2;
         System.out.println(calcQuadrado.calculaLado());
-
-        calcTrapezio.baseMenor = 1;
-        calcTrapezio.baseMaior = 2;
-        calcTrapezio.altura = 5;
         System.out.println(calcTrapezio.calculaArea());
-
-        calcTriangulo.altura = 10;
-        calcTriangulo.base = 2;
-
         System.out.println(calcTriangulo.calcularArea());
 
     }
