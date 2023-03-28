@@ -9,4 +9,17 @@ public class Relogio {
         ponteiroMinuto.posicao = minuto;
         ponteiroSegundo.posicao = segundo;
     }
+
+    int lerHora()
+    {
+        return this.ponteiroHora.posicao;
+    }
+    int lerminuto()
+    {
+        return this.ponteiroMinuto.posicao;
+    }
+    int lerSegundo()
+    {
+        return this.ponteiroSegundo.posicao;
+    }
 }
