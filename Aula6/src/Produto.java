@@ -1,7 +1,7 @@
 public class Produto {
-    public String nome;
-    public double preco;
-    public int quantidade;
+    private String nome;
+    private double preco;
+    private int quantidade;
 
     public Produto(String p_nome, double p_preco, int p_qtd)
     {
