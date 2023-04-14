@@ -66,26 +66,19 @@ public class Gincana
             }
         }else
         {
-            Scanner scan = new Scanner(System.in);
-            System.out.println("o Estudante vencedor esta vazio, deseja adicionar o estudante atual como o vencedor ? (digite 1 para sim e 0 para não)");
-            System.out.println("====================================================================================");
-            int resultado = scan.nextInt();
-
-            if(resultado == 1)
-            {
-                this.totalEstudantes += 1;
-                this.estudanteVencedor = p_estudante;
-                this.pontuacaoMaxima = p_estudante.getPontos();
-
-                System.out.println("O estudante " + p_estudante.getNome() + " é o atual estudante vencedor");
-                System.out.println("====================================================================================");
-            }
+            System.out.println("Estudante vencedor esta nulo");
         }
+
     }
 
     public void exibirVencedor()
     {
-        System.out.println("O estudante vencedor se chama : " + this.estudanteVencedor.getNome() + " e a sua pontuação é " + this.estudanteVencedor.getPontos());
-        System.out.println("====================================================================================");
+        if(this.estudanteVencedor != null)
+        {
+            System.out.println("o estudante vencedor esta nulo");
+        }else
+        {
+            System.out.println("O estudante vencedor se chama : " + this.estudanteVencedor.getNome() + " e a sua pontuação é " + this.estudanteVencedor.getPontos());
+        }
     }
 }
