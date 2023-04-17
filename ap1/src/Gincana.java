@@ -49,7 +49,9 @@ public class Gincana
 
     public void adicionarEstudante(Estudante p_estudante)
     {
-        if(this.estudanteVencedor != null) {
+        boolean EstudanteVencedorNaoEstaNulo = this.estudanteVencedor == null;
+
+        if(EstudanteVencedorNaoEstaNulo) {
 
             this.totalEstudantes += 1;
 
