@@ -49,7 +49,7 @@ public class Gincana
 
     public void adicionarEstudante(Estudante p_estudante)
     {
-        boolean EstudanteVencedorNaoEstaNulo = this.estudanteVencedor == null;
+        boolean EstudanteVencedorNaoEstaNulo = this.estudanteVencedor != null;
 
         if(EstudanteVencedorNaoEstaNulo) {
 
@@ -68,19 +68,21 @@ public class Gincana
             }
         }else
         {
-            System.out.println("Estudante vencedor esta nulo");
+            this.totalEstudantes = 1;
+            this.estudanteVencedor = p_estudante;
         }
 
     }
 
     public void exibirVencedor()
     {
-        if(this.estudanteVencedor != null)
-        {
-            System.out.println("o estudante vencedor esta nulo");
+        boolean EstudanteVencedorNaoEstaNulo = this.estudanteVencedor != null;
+
+        if(EstudanteVencedorNaoEstaNulo) {
+            System.out.println("O estudante vencedor se chama : " + this.estudanteVencedor.getNome() + " e a sua pontuação é " + this.estudanteVencedor.getPontos());
         }else
         {
-            System.out.println("O estudante vencedor se chama : " + this.estudanteVencedor.getNome() + " e a sua pontuação é " + this.estudanteVencedor.getPontos());
+            System.out.println("o estudante vencedor esta nulo");
         }
     }
 }
