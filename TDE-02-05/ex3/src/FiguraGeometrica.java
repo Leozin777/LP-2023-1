@@ -1,11 +1,11 @@
 public class FiguraGeometrica
 {
-    public double calcularArea(double p_num)
+    public void calcularArea()
     {
-        return p_num * p_num;
+
     }
-    public double calcularPerimetro(double p_num)
+    public void calcularPerimetro()
     {
-        return p_num * 4;
+
     }
 }
